@@ -571,7 +571,7 @@
         </div>
       </div>
     </div>
-    <div class="resume-link-wrap reveal"><a href="#" class="resume-link">View Full Résumé <span class="arrow">↗</span></a></div>
+    <div class="resume-link-wrap reveal"><a href="/resume.pdf" target="_blank" class="resume-link">View Full Résumé <span class="arrow">↗</span></a></div>
   </div>
 </section>
 
@@ -670,10 +670,13 @@
         </div>
       </div>
       <div class="reveal reveal-d2">
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-row"><input type="text" placeholder="Name" /><input type="email" placeholder="Email" /></div>
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message"></textarea>
+        <form class="contact-form" action="https://formsubmit.co/john.adams95@proton.me" method="POST">
+          <input type="hidden" name="_subject" value="New message from johnjadams.dev">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://johnjadams.dev">
+          <div class="form-row"><input type="text" name="name" placeholder="Name" required /><input type="email" name="email" placeholder="Email" required /></div>
+          <input type="text" name="_subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message" required></textarea>
           <button type="submit" class="btn btn-primary">Send message <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
         </form>
       </div>
